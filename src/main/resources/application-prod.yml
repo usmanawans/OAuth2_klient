@@ -1,0 +1,16 @@
+spring:
+  security:
+    oauth2:
+      client:
+        provider:
+          azure:
+            issuer-uri: https://login.microsoftonline.com/${tenant_id}/v2.0
+        registration:
+          azure:
+            provider: azure
+            client-id: ${client_id}
+            client-secret: ${client_secret}
+            scope:
+              - openid
+              - email
+              - profile
